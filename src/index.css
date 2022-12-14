@@ -30,10 +30,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(3,3,32,1) 37%, rgba(155,52,239,1) 100%);
 }
 
 h1 {
