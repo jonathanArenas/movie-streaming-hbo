@@ -1,5 +1,6 @@
 import Navbar from './componets/Navbar'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import { AuthProvider } from './context/Auth';
 function App() {
   const client = new ApolloClient({
     cache: new InMemoryCache(),
@@ -8,7 +9,9 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Navbar></Navbar>
+     <AuthProvider>
+        <Navbar></Navbar>
+     </AuthProvider>
     </ApolloProvider>
   )
 }
